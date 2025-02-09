@@ -4,7 +4,8 @@
   "description": "Proto Dashboard",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:server": "tsnd ./src/back-end/main.ts",
+    "dev:bundler": "webpack -w --mode=development"
   },
   "author": "",
   "license": "ISC",
