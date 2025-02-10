@@ -2,7 +2,7 @@ import {useState,useEffect} from 'react';
 export default function GetDetails(){
     const [details,setDetails]=useState({});
     let onClick=async ()=>{
-        let data=await (await fetch("/apis/accessToken")).json();
+        let data=await (await fetch("/apis/userDetails")).json();
         setDetails(data);
     }
     return(

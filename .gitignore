@@ -1,2 +1,3 @@
 /node_modules
 /src/back-end/metaapis.ts
+/src/back-end/ngrok.conf.ts

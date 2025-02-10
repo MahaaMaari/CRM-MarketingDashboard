@@ -1,11 +1,11 @@
 import express from "express";
 import metaWorld from "./metaapis";
 const router = express.Router();
-router.get('/accessToken',async (req,res)=>{
-    let URI=new URL(`https://${metaWorld.facebookLogin}/v22.0/me`);
-    URI.searchParams.set('access_token',metaWorld.accessToken);
-    URI.searchParams.set('fields','id');
-    let response=await fetch(URI);
-    let data=await response.json();
+router.get('/userDetails',async (req,res)=>{
+    let uri=new URL(`${metaWorld.metaHost}/me`);
+    uri.searchParams.set('access_token',metaWorld.profSell.accessToken);
+    let data=await (await fetch(uri)).json();
+    console.log(data);
+    res.json(data);
 })
 export default router;
