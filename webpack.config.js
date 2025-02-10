@@ -1,4 +1,6 @@
+const { use } = require("react");
 const webpack = require("webpack");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
   entry: "./src/UI/index.tsx",
   resolve: {
@@ -13,12 +15,17 @@ module.exports = {
           loader: "ts-loader",
         },
       },
+      {
+        test:/\.(sa|sc|c)ss$/,
+        use:[
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "sass-loader"
+        ]
+      }
     ],
   },
   plugins:[
-    new webpack.EnvironmentPlugin({
-      PORT:"8081",
-      HOST:"localhost"
-    })
+    new MiniCssExtractPlugin({filename:"style.css"})
   ]
 };

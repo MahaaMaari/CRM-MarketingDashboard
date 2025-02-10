@@ -22,6 +22,11 @@
   "devDependencies": {
     "@ngrok/ngrok": "^1.4.1",
     "@types/express": "^5.0.0",
+    "css-loader": "^7.1.2",
+    "mini-css-extract-plugin": "^2.9.2",
+    "sass": "^1.84.0",
+    "sass-loader": "^16.0.4",
+    "style-loader": "^4.0.0",
     "ts-loader": "^9.5.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.7.3",

@@ -11,8 +11,10 @@ server.use('/apis',router);
 server.set('views',path.join(__dirname+`/../UI/views`));
 server.set('view engine','ejs');
 server.use('/',(req,res)=>{
-    let data=req.params;
-    console.log(data);
+    let data=req.query;
+    if(data.code){
+        
+    }
     res.render('index');
 });
 server.listen(4004,'localHost',()=>{
