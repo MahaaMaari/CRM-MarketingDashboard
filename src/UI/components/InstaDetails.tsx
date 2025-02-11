@@ -1,14 +1,10 @@
 import {useState,useEffect} from 'react';
+import Instagram from '../controllers/Instagram';
 export default function GetDetails(){
-    const [details,setDetails]=useState({});
-    let onClick=async ()=>{
-        let data=await (await fetch("/apis/userDetails")).json();
-        setDetails(data);
-    }
+    const[instaDetails,setInstaDetails]=useState({});
+    const controller=new Instagram();
     return(
         <div>
-            <button onClick={onClick}>Get Details</button>
-            <p>{details.id}</p>
         </div>
     )
 }

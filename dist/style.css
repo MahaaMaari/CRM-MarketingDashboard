@@ -2,8 +2,27 @@
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/UI/styles/HomePage.scss ***!
   \**********************************************************************************************************************/
 .body {
-  background-color: red;
+  display: flex;
+  flex-direction: column;
 }
-.body div {
-  background-color: black;
+
+.homeNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(235, 85, 15);
+  border: 5px solid rgb(234, 136, 7);
+  border-radius: 10px;
+}
+
+.rightAlign {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.leftAlign {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }

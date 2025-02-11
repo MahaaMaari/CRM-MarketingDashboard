@@ -1,16 +1,13 @@
 import { useState, useEffect } from "react";
-import GetDetails from "./InstaDetails";
+import InstaDetails from "./InstaDetails";
+import NavBar from "./NavBar";
 import { BrowserRouter,Routes,Route,Link } from "react-router-dom";
-import '../styles/HomePage.scss';
+import '../styles/index.css';
 export default function OnePage() {
     return (
-        <div className='body'>
-            <div className='dev'>
-                <p>Hello</p>
-            </div>
-            <div>
-
-            </div>
+        <div className='flex'>
+            <NavBar className='flex'/>
+            <InstaDetails />
         </div>
     );
 }
