@@ -4,7 +4,8 @@ export default function GetDetails(){
     const[instaDetails,setInstaDetails]=useState({});
     const controller=new Instagram();
     return(
-        <div>
+        <div className="flex w-screen justify-center items-center">
+            
         </div>
     )
 }

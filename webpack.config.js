@@ -1,6 +1,7 @@
 const { use } = require("react");
 const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { plugin } = require("postcss");
 module.exports = {
   entry: "./src/UI/index.tsx",
   resolve: {
@@ -16,9 +17,12 @@ module.exports = {
         },
       },
       {
-        test:/\.css$/i,
-        use:["style-loader", "css-loader", "postcss-loader"]
+        test:/\.css$/,
+        use:[MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"]
       }
     ],
-  }
+  },
+  plugins:[
+    new MiniCssExtractPlugin({filename:'style.css'})
+  ]
 };
